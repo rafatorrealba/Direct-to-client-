@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+       
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        --> 
+		<meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+		<link rel="shortcut icon" href="https://s3.us-east-2.amazonaws.com/dtc.ubiot/img/favicon.ico"/>  
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" ></script>
+		<link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="bootstrap3/css/navbar-static-top.css" rel="stylesheet">
+        <link href="bootstrap3/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="fooTable/css/prism.css" rel="stylesheet">  
+        <link href="fooTable/css/footable.bootstrap.min.css" rel="stylesheet">    
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/index2.css">
+		<link rel="stylesheet" href="css/font.css">
+
+
+		
+        <title>Manufacturer: Safe4Ride</title>
+    </head>
+    <body>
+       <!-- <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+		<div>
+		  <label class="etiqueta">Insert Data Invoice :</label>
+		  <textarea class="textoarea" rows="12" cols="65" placeholder="Data in Format JSON" > </textarea>
+		  <button class="btn" type="button" onclick="alert('Funcion sin desarrollar =P');">Save Invoice</button>
+		</div> !-->
+		<div class="welcome">
+		  <label id="welcomex">There is no user pool</label>
+		</div>
+		<div id="insertInvoice" class="TablaInvoice">
+		    <button class="btn2 mover tamano" type="button"   id="listarFacturas">View Invoices In System</button>
+		    <!-- <button class="btn"  type="button" >requestazo</button> !-->
+ 			<button class="btn2" id="addFields" >Add More Fields</button>
+			<!-- <label class="etiqueta">Insert Data Invoice :</label> !-->
+			<table class="table table-striped" >
+				<thead>
+				  <tr>
+				    <th>#</th> 
+					<th>ID Invoice</th>
+					<th>Serial Product</th>
+					<th>Date</th>
+				  </tr>
+				</thead>
+				<tbody class="input_fields_wrap">
+				  
+				</tbody>
+		  </table>
+		  <button class="btn2 mover tamano" type="button" onclick="getDataAJson();">Save Invoice</button>
+		</div> 
+		<div id="TablaInvoiceList" class="TablaInvoice">
+		    <button class="btn2 mover tamano" type="button"   id="mostrarInsertarFacturas">Insert Invoices</button>
+		    <!-- <button class="btn"  type="button" >requestazo</button> !-->
+ 			 
+		 <table id="table2" class="table2 table-striped " data-filtering="true" data-paging="true"  data-sorting="true"   data-show-toggle="false" data-expand-first="true" >
+				<!--<thead>
+				  <tr>
+				    <th>#</th> 
+					<th><a href="">ID Invoice</a></th>
+					<th>Serial Product</th>
+					<th>Date</th>
+				  </tr>
+				</thead> !-->
+
+		  </table>
+		</div> 
+    </body>
+	    <!-- desde aqui librerias de footable!-->
+		<script src="jquery/jquery-slim.min.js"></script>
+        <script src="jquery/jquery.js"></script>
+	    <script src="fooTable/compiled/footable.js"></script> 
+        <script src="bootstrap3/js/bootstrap.min.js"></script>
+		  
+        <script src="fooTable/js/prism.js"></script>
+        <script src="fooTable/js/moment.js"></script>
+		<!-- hasta son las librerias para footable-->
+		<!-- <script src="js/jquery-3.1.0.js"></script> -->
+		<script src="js/bootstrap.min.js" ></script>
+		<script src="js/vendor/aws-cognito-sdk.min.js"></script>
+		<script src="js/vendor/amazon-cognito-identity.min.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/cognito-auth.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+
+</html>

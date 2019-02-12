@@ -1,0 +1,243 @@
+@font-face {
+    font-family: LightItalic;
+    src: url(Lato-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: Heavy;
+    src: url(Lato-Heavy.ttf);
+}
+
+@font-face {
+    font-family: HeavyItalic;
+    src: url(Lato-HeavyItalic.ttf);
+}
+
+@font-face {
+    font-family: Light;
+    src: url(Lato-Light.ttf);
+}
+
+
+
+
+body{
+	
+	background-repeat:no-repeat;
+	/*-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;*/
+	background-size:cover;
+	/*background-position:center;*/
+
+}
+.etiqueta{
+	margin-left:00px;
+	margin-top:-25px;
+	position: absolute;
+	font-size: 18px;
+	
+}
+
+.textoarea{
+	margin-left: 380px;
+	margin-top: 300px;
+	font-size: 20px;
+}
+.btn33 {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #FF9000;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-left: 820px;
+}
+
+.btn2 {
+     
+    background-color: white;
+    color: #f50856;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    display: block;
+
+    font-family: "fairplex-wide";
+    font-size: 20px;
+    opacity: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn {
+    width:100%; 
+  
+}
+
+.btn2:hover {
+    background-color: #dddddd;
+    color: #bb0642;
+}
+  /*margin-left: 820px;*/
+.mover {
+	margin-left: 820px;
+	
+}
+.tamano {
+	width: 300px;
+	
+}
+/*
+.btn:hover {
+  background: #A16210;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  text-decoration: none;
+}
+
+*/
+
+.TablaInvoice{
+	font-size: 18px;
+	 margin-left:-1em;
+	
+	/*margin-left:50px;
+	margin-top:280px;*/
+	width:95%;
+	
+	border-spacing: 0px;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+	display: table;
+	
+
+}
+
+.table2{
+	 
+	border-spacing: 0px;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+	display: table;
+	padding: 0px; 
+
+}
+
+#table2 tbody{
+	 font-family: light;
+	 color: #246d96;
+
+
+}
+
+.filasData{
+	
+}
+.table td, .table th {
+	padding: 0px; 
+
+}
+.table{
+  width: 80%;
+}
+.welcome{
+	font-size: 20px;
+	margin-left:740px;
+	margin-top:220px;
+	position: absolute;
+	color:#007bff;
+	
+}
+
+input[type=text] {
+	padding: 0px 0; 
+    margin: 0px 0 30px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+	width: 90%;
+
+}
+
+.remove_field{
+	color: #d79604;
+	font-family: Heavy;;
+
+	
+}
+selection {
+    background: #000000;
+    text-shadow: none;
+}
+
+label{
+	
+	font-family: "fairplex-wide";
+}
+
+body {
+     min-height: 00px; 
+}
+
+
+    input{
+       border:1px solid #246d96;
+    }
+
+	
+
+
+.btn-info{
+font-family: Heavy;
+font-size:14px;
+	
+}
+
+
+.btn-warning:not(:disabled):not(.disabled).active, .btn-warning:not(:disabled):not(.disabled):active, .show>.btn-warning.dropdown-toggle {
+    color: #fff !important;
+    background-color: #eb9316 !important;
+    border-color: #eb9316 !important;
+	box-shadow: 1px 1px 1px 1px #fff !important;
+}
+
+
+
+@media all and (min-width: 950px) {
+
+    .content {margin-left:-5em}
+ 
+
+}
+
+
+#addFields {
+    font-family: Heavy;
+    font-size: 14px;
+	border-color: #e38d13;
+}
+
+thead tr.footable-header{
+   color:#246d96;  border-bottom: 1px solid #246d96;  border-top: 1px solid #246d96; font-family: Heavy; font-size:24px;
+}
+
+#TablaInvoiceList{
+    margin-left:-8em;
+}

@@ -1,0 +1,727 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+ @font-face {
+  font-family: LatoHeavyItalic;
+  src: url(Lato-HeavyItalic.ttf);
+}
+
+ @font-face {
+  font-family: latoregular;
+  src: url(Lato-Regular.ttf);
+}
+
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#246D96;
+    /*background-image:linear-gradient(top, #A7A7A7 0%, #024011 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #024011 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #024011 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #024011)
+    );*/ 
+
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    width: 700px;
+    margin:0px;
+    padding:0px;
+   /* text-transform:uppercase;*/
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+/* Estilos css rtorrealba: Sinning*/
+
+h1{
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    vertical-align: middle;
+    text-align: center;
+    font-family:"lato heavy italic";
+}
+h2 { 
+    color:#256D96;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    font-family: "lato heavy italic";
+    text-align: center;
+  }
+
+.enlace{
+    margin-top: 30px;
+}
+
+#emailInputSignin {
+    color: #256D96;
+  }
+
+#passwordInputSignin {
+    color: #256D96;
+  }
+
+  
+div#franja3 {
+    width: 100vw;
+    height: 80px;
+    bottom: 0px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: black;
+    opacity: 0.70;
+    display: table;
+    border-top: 10px solid #D79604;
+}
+
+#ubiot {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 27px;
+}
+
+#transparencia {
+    width: 70%;
+    height: 100%;
+    background-color: #D5EDFB;
+    opacity: 0.80;
+    position: relative;
+    margin: auto;
+}
+
+.contenedor{
+    width: 100%;
+    height: 710px;
+    margin: auto;
+}
+
+#franja3 h1{
+    font-size: 20px;
+    display: table-cell;
+}
+
+#registrationForm{
+    height: 100px;
+}
+
+.enlace:hover{
+    opacity: 0.60;
+}
+
+/*Estilos css rtorrealba: Sinning*/
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+/*
+css del tutorial wildness
+*/
+
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+body{
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+iframe{
+    right: 30px;
+    bottom: 100px;
+    position:fixed;
+    z-index: 5;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #000000;
+    text-shadow: none;
+}
+
+::selection {
+    background: #000000;
+    text-shadow: none;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+/* Generic */
+
+body{
+  width: 100%;
+  background-image: url(../images/background.png);
+  /*background-size: cover;*/
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  font-family: "fairplex-wide";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/* Logo */
+
+
+header{
+  width: 70vw;
+}
+
+header img{
+  width: 37%;
+  margin:  center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 700px) {
+  header img{
+    width: 30%;
+  }
+}
+
+.conectar{
+    width: 100%;
+    color:#246D96;
+    font-size: 20px;
+    font-weight: 700;
+    vertical-align: middle;
+    text-align: center;
+    font-family:"LatoHeavyItalic";
+    margin: 60px 0 0 0;
+}
+
+@media screen and (max-width: 800px) {
+    .conectar{
+      font-size: 15px;
+      margin: 40px 0 0 0;
+    }
+  }
+
+/* Forms */
+
+.form-wrap{
+    width: 45%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+    .form-wrap{
+        width: 5%;
+    }
+  }
+
+.left-form{
+  width: 47.5%;
+
+  float: left;
+}
+
+.right-form{
+  width: 47.5%;
+
+  float: right;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .form-wrap{
+    width: 80%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .form-wrap{
+    width: 40%;
+  }
+
+  .left-form{
+    width: 100%;
+  }
+
+  .right-form{
+    width: 100%;
+  }
+}
+input[type=text]{
+	width: 100%;
+    padding: 12px 0;
+    margin: 10px 0 30px;
+    display: inline-block;
+    border: none;
+    border-bottom: 2px solid white;
+    box-sizing: border-box;
+    background: transparent;
+    outline: none;
+
+    font-family: "fairplex-wide";
+    font-size: 24px;
+    opacity: 1;
+    color: #3152ff;
+    font-weight: 400;
+
+    -webkit-transition: border-bottom 0.4s ease-in-out;
+    transition: border-bottom 0.4s ease-in-out;
+}
+
+ input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 0;
+    margin: 20px 0 30px;
+    display: inline-block;
+    border: none;
+    border-bottom: 2px solid white;
+    box-sizing: border-box;
+    background: white;
+    outline: none;
+    border-radius: 10px;
+    font-family: "lato heavy italic";
+    font-size: 24px;
+    opacity: 1;
+    color: #3152ff;
+    font-weight: 400;
+
+    -webkit-transition: border-bottom 0.4s ease-in-out;
+    transition: border-bottom 0.4s ease-in-out;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    /*border-bottom: 2px solid black;*/
+}
+
+
+input[type=text]:valid, input[type=password]:valid {
+    /*border-bottom: 2px solid #f50856;*/
+} /* This is a quick fix to get an authorization / valid entry state without using JS */
+
+input[type=submit] {
+    width: 200px;
+    background-color: #246D96;
+    color: #D79604;
+    padding: 14px 20px;
+    margin: 8px auto 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+
+    font-family: "lato heavy italic";
+    font-size: 24px;
+    opacity: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+
+input[type=submit]:hover {
+    color: white;
+    opacity: 0.80;
+    
+}
+
+
+::-webkit-input-placeholder { /* Chrome */
+  color: white;
+  font-style: italic;
+  opacity: .4;
+
+  font-family: "fairplex-wide";
+  color: white;
+  font-weight: 400;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+  font-style: italic;
+  opacity: .4;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+  opacity: .4;
+  font-style: italic;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: white;
+  opacity: .4;
+  font-style: italic;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+/*@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+tbody .input_fields_wrap {
+    padding: 0;
+    padding-top: 0;
+    padding-right: 0 ;
+    padding-bottom: 0;
+    padding-left: 0 ;
+    vertical-align: top;
+    
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+input::placeholder {
+  color: #246D96 !important;
+      font-weight: 700;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "lato heavy italic";
+	margin-left:5px;
+	letter-spacing: 0.1em;
+	
+}
+
+
+.textolato{
+  font-family: latoregular;
+	
+}
+
+@media screen and (max-width: 1800px) {
+  .buttonleft {
+    margin-left:13em !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .buttonleft {
+    margin-left:10em !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .buttonleft {
+    margin-left:8em !important;
+  }
+}
+
+
+@media screen and (max-width: 585px) {
+  .buttonleft {
+    margin-left:-1em !important;
+  }
+}

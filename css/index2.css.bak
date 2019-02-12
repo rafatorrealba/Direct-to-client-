@@ -1,0 +1,160 @@
+body{
+	background-image:url("../img/fondo-3.jpg");
+	background-repeat:no-repeat;
+	/*-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;*/
+	background-size:cover;
+	/*background-position:center;*/
+
+}
+.etiqueta{
+	margin-left:00px;
+	margin-top:-25px;
+	position: absolute;
+	font-size: 18px;
+	
+}
+
+.textoarea{
+	margin-left: 380px;
+	margin-top: 300px;
+	font-size: 20px;
+}
+.btn {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #FF9000;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-left: 820px;
+}
+
+.btn2 {
+     
+    background-color: white;
+    color: #f50856;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    display: block;
+
+    font-family: "fairplex-wide";
+    font-size: 20px;
+    opacity: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn2:hover {
+    background-color: #dddddd;
+    color: #bb0642;
+}
+  /*margin-left: 820px;*/
+.mover {
+	margin-left: 820px;
+	
+}
+.tamano {
+	width: 300px;
+	
+}
+
+.btn:hover {
+  background: #A16210;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  text-decoration: none;
+}
+
+.TablaInvoice{
+	font-size: 18px;
+	 
+	
+	margin-left:50px;
+	margin-top:280px;
+	width:95%;
+	position: absolute;
+	border-spacing: 0px;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+	display: table;
+	
+
+}
+
+.table2{
+	 
+	border-spacing: 0px;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+	display: table;
+	padding: 0px; 
+
+}
+
+.filasData{
+	
+}
+.table td, .table th {
+	padding: 0px; 
+
+}
+.table{
+  width: 90%;
+}
+.welcome{
+	font-size: 20px;
+	margin-left:740px;
+	margin-top:220px;
+	position: absolute;
+	color:#007bff;
+	
+}
+
+input[type=text] {
+	padding: 0px 0; 
+    margin: 0px 0 30px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+	width: 90%;
+
+}
+
+.remove_field{
+	color: #dc3545;
+	 font-family: "fairplex-wide";
+
+	
+}
+selection {
+    background: #000000;
+    text-shadow: none;
+}
+
+label{
+	
+	font-family: "fairplex-wide";
+}
+
+body {
+     min-height: 00px; 
+}
